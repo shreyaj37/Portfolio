@@ -29,6 +29,14 @@ nav ul li a {
     text-decoration: none;
 }
 
+.profile-pic {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    display: block;
+    margin: 10px auto; /* Center the image */
+}
+
 section {
     margin: 40px;
     padding: 20px;
@@ -45,7 +53,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
