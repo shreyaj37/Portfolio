@@ -3,71 +3,71 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Light background color */
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Make body take full height */
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Dark background for header */
+    color: white; /* White text color */
     padding: 20px;
     text-align: center;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet points */
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline; /* Display list items in a row */
+    margin-right: 20px; /* Space between items */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* White link color */
+    text-decoration: none; /* Remove underline from links */
 }
 
 .profile-pic {
-    width: 150px; /* Adjust the width as needed */
+    width: 150px; /* Set width of profile picture */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Makes the image circular */
-    display: block;
+    display: block; /* Ensures it behaves like a block element */
     margin: 10px auto; /* Center the image */
 }
 
 section {
-    margin: 40px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
+    margin: 40px; /* Space around sections */
+    padding: 20px; /* Space inside sections */
+    background-color: white; /* White background for sections */
+    border-radius: 10px; /* Rounded corners */
     flex: 1; /* Allow sections to grow and fill space */
 }
 
 h1, h2 {
-    color: #333;
+    color: #333; /* Dark color for headings */
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    background-color: #333; /* Dark background for footer */
+    color: white; /* White text color */
+    text-align: center; /* Center text in footer */
+    padding: 10px; /* Space inside footer */
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0;
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove padding from left */
 }
 
 ul li {
-    padding: 5px 0;
+    padding: 5px 0; /* Space above and below list items */
 }
 
 a {
-    color: #008cba;
+    color: #008cba; /* Blue color for links */
 }
