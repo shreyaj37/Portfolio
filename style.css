@@ -19,19 +19,17 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 20px; /* Space below header */
 }
 
 .header-text {
-    margin-right: 20px; /* Space between text and image */
+    margin-left: 20px; /* Space between text and image */
     z-index: 1; /* Ensure text is above background */
 }
 
 .background-image {
     position: relative;
-    width: 200px; /* Increased size of image */
-    height: 200px; /* Increased size of image */
+    width: 300px; /* Increased size of image */
+    height: 300px; /* Increased size of image */
 }
 
 .background-image img {
@@ -119,8 +117,7 @@ footer {
     background-color: #008cba; /* Color of the filled part */
     height: 100%; /* Full height */
     border-radius: 5px; /* Rounded corners for filled part */
-    width: 0; /* Initial width, will be animated */
-    transition: width 0.5s; /* Smooth transition */
+    width: 90%; /* Keep it static */
 }
 
 ul {
@@ -136,10 +133,47 @@ a {
     color: #008cba; /* Blue color for links */
 }
 
+/* Medium articles */
+.medium-article {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 8px;
+    margin: 10px 0; /* Space between articles */
+    padding: 10px;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.medium-article:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
+}
+
 /* Mobile navigation styles */
 .mobile-nav-toggle {
     display: none; /* Initially hide the toggle button */
 }
 
 /* Media query for mobile screens */
-@media (max-width: 
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block; /* Show toggle button on mobile */
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column; /* Stack menu items */
+        width: 100%; /* Full width */
+        background-color: #333; /* Dark background for dropdown */
+    }
+
+    nav ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space between items in dropdown */
+    }
+}
