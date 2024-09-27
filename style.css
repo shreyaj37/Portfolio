@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Make body take full height */
@@ -12,22 +12,33 @@ body {
 header {
     position: relative; /* Allow for absolute positioning of background image */
     text-align: center;
-    overflow: hidden; /* Prevent overflow of blurred background */
+    padding: 20px 0; /* Add padding for header */
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .background-image {
-    position: absolute; /* Position the background image absolutely */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('myphoto.jpeg') no-repeat center center; /* Background image */
-    background-size: cover; /* Cover the entire header */
-    filter: blur(8px); /* Apply blur effect */
-    z-index: -1; /* Send background behind other content */
+    position: relative;
+    width: 200px; /* Adjust to your preference */
+    height: auto;
+    margin-right: 20px; /* Space between image and text */
 }
 
-header h1, header p {
+.background-image img {
+    width: 100%; /* Full width for image */
+    border-radius: 50%; /* Circular image */
+    filter: blur(4px); /* Apply blur effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-text {
     position: relative; /* Bring text in front of the blurred background */
     color: white; /* White text color for visibility */
     z-index: 1; /* Ensure text is above background */
@@ -51,15 +62,6 @@ nav ul li a {
 
 nav ul li a.active {
     text-decoration: underline; /* Underline active link */
-}
-
-.profile-pic {
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Makes the image circular */
-    display: block; /* Ensures it behaves like a block element */
-    margin: 10px auto; /* Center the image */
-    z-index: 1; /* Ensure it stays above background */
 }
 
 section {
