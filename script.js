@@ -79,6 +79,12 @@ mobileNavToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active'); // Toggle visibility of navigation menu
 });
 
+// Toggle details in timeline
+function toggleDetails(detailsId) {
+    const details = document.getElementById(detailsId);
+    details.style.display = details.style.display === 'block' ? 'none' : 'block'; // Show or hide details
+}
+
 // Log a message when the page is loaded
 window.onload = function() {
     console.log("Welcome to Shreya Joshi's Portfolio!");

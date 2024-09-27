@@ -1,6 +1,6 @@
 /* Basic styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use Comic Sans MS */
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #1f1c2c, #928DAB); /* Dark gradient background */
@@ -30,13 +30,37 @@ header {
 
 .background-image {
     position: relative;
-    width: 150px; /* Adjust size of the image */
-    height: 150px; /* Height to maintain aspect ratio */
+    width: 200px; /* Increased size of image */
+    height: 200px; /* Increased size of image */
 }
 
 .background-image img {
     width: 100%; /* Full width for image */
     border-radius: 50%; /* Circular image */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Display list items in a row */
+    margin-right: 20px; /* Space between items */
+}
+
+nav ul li a {
+    color: white; /* White link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Add padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Button color */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 section {
@@ -57,16 +81,27 @@ footer {
     padding: 10px; /* Space inside footer */
 }
 
-.project {
-    margin: 20px 0; /* Space between project cards */
-    padding: 15px; /* Space inside project cards */
-    border: 1px solid #ccc; /* Border around project cards */
-    border-radius: 8px; /* Rounded corners */
-    transition: transform 0.3s; /* Smooth scaling on hover */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
-.project:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+.timeline-item {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.timeline-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
+}
+
+.details {
+    display: none; /* Hidden details */
 }
 
 .skill {
@@ -107,28 +142,4 @@ a {
 }
 
 /* Media query for mobile screens */
-@media (max-width: 768px) {
-    .mobile-nav-toggle {
-        display: block; /* Show toggle button on mobile */
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    nav ul {
-        display: none; /* Hide menu by default on mobile */
-        flex-direction: column; /* Stack menu items */
-        width: 100%; /* Full width */
-        background-color: #333; /* Dark background for dropdown */
-    }
-
-    nav ul.active {
-        display: flex; /* Show menu when active */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Space between items in dropdown */
-    }
-}
+@media (max-width: 
