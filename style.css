@@ -10,10 +10,27 @@ body {
 }
 
 header {
-    background-color: #333; /* Dark background for header */
-    color: white; /* White text color */
-    padding: 20px;
+    position: relative; /* Allow for absolute positioning of background image */
     text-align: center;
+    overflow: hidden; /* Prevent overflow of blurred background */
+}
+
+.background-image {
+    position: absolute; /* Position the background image absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('myphoto.jpeg') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the entire header */
+    filter: blur(8px); /* Apply blur effect */
+    z-index: -1; /* Send background behind other content */
+}
+
+header h1, header p {
+    position: relative; /* Bring text in front of the blurred background */
+    color: white; /* White text color for visibility */
+    z-index: 1; /* Ensure text is above background */
 }
 
 nav ul {
@@ -42,6 +59,7 @@ nav ul li a.active {
     border-radius: 50%; /* Makes the image circular */
     display: block; /* Ensures it behaves like a block element */
     margin: 10px auto; /* Center the image */
+    z-index: 1; /* Ensure it stays above background */
 }
 
 section {
