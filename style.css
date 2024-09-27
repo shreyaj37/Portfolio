@@ -3,77 +3,51 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    background: linear-gradient(135deg, #1f1c2c, #928DAB); /* Dark gradient background */
+    color: #fff; /* White text color */
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Make body take full height */
 }
 
 header {
-    position: relative; /* Allow for absolute positioning of background image */
+    position: relative;
+    padding: 20px; /* Padding for header */
     text-align: center;
-    padding: 20px 0; /* Add padding for header */
 }
 
 .header-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative;
+    justify-content: center;
+    margin-bottom: 20px; /* Space below header */
+}
+
+.header-text {
+    margin-right: 20px; /* Space between text and image */
+    z-index: 1; /* Ensure text is above background */
 }
 
 .background-image {
     position: relative;
-    width: 200px; /* Adjust to your preference */
-    height: auto;
-    margin-right: 20px; /* Space between image and text */
+    width: 150px; /* Adjust size of the image */
+    height: 150px; /* Height to maintain aspect ratio */
 }
 
 .background-image img {
     width: 100%; /* Full width for image */
     border-radius: 50%; /* Circular image */
-    filter: blur(4px); /* Apply blur effect */
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.header-text {
-    position: relative; /* Bring text in front of the blurred background */
-    color: white; /* White text color for visibility */
-    z-index: 1; /* Ensure text is above background */
-}
-
-nav ul {
-    list-style-type: none; /* Remove bullet points */
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline; /* Display list items in a row */
-    margin-right: 20px; /* Space between items */
-}
-
-nav ul li a {
-    color: white; /* White link color */
-    text-decoration: none; /* Remove underline from links */
-}
-
-nav ul li a.active {
-    text-decoration: underline; /* Underline active link */
 }
 
 section {
     margin: 40px; /* Space around sections */
     padding: 20px; /* Space inside sections */
-    background-color: white; /* White background for sections */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
     border-radius: 10px; /* Rounded corners */
-    flex: 1; /* Allow sections to grow and fill space */
 }
 
 h1, h2 {
-    color: #333; /* Dark color for headings */
+    color: #f8f9fa; /* Light color for headings */
 }
 
 footer {
