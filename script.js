@@ -8,19 +8,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Expand/Collapse for experience section
+// Expand/Collapse job details on click
 document.querySelectorAll('.job').forEach(job => {
-    job.addEventListener('click', function() {
-        const details = this.querySelector('ul');
-        if (details.style.display === 'block') {
-            details.style.display = 'none';
-        } else {
+    const header = job.querySelector('.job-header');
+    const role = job.querySelector('.role');
+    const details = job.querySelector('.job-details');
+
+    const toggleDetails = () => {
+        if (details.style.display === 'none') {
             details.style.display = 'block';
+        } else {
+            details.style.display = 'none';
         }
-    });
+    };
+
+    // Add click listeners to both the header and role elements
+    header.addEventListener('click', toggleDetails);
+    role.addEventListener('click', toggleDetails);
 });
 
-// Scroll to top button (optional feature)
+// Scroll-to-top button (optional feature)
 const scrollToTopBtn = document.createElement('button');
 scrollToTopBtn.innerHTML = "⬆️";
 scrollToTopBtn.id = "scrollToTop";
@@ -50,29 +57,5 @@ scrollToTopBtn.addEventListener('click', function() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
-    });
-});
-
-// Dynamic content for social media hover tooltips (optional feature)
-const socialLinks = document.querySelectorAll('.social-links a');
-
-socialLinks.forEach(link => {
-    link.addEventListener('mouseover', function() {
-        const tooltip = document.createElement('div');
-        tooltip.className = 'tooltip';
-        tooltip.innerHTML = `Visit my ${this.textContent.trim()}`;
-        tooltip.style.position = 'absolute';
-        tooltip.style.backgroundColor = '#333';
-        tooltip.style.color = '#fff';
-        tooltip.style.padding = '5px';
-        tooltip.style.borderRadius = '5px';
-        tooltip.style.top = `${this.getBoundingClientRect().top - 30}px`;
-        tooltip.style.left = `${this.getBoundingClientRect().left}px`;
-        tooltip.style.zIndex = '1000';
-        document.body.appendChild(tooltip);
-
-        this.addEventListener('mouseleave', () => {
-            document.body.removeChild(tooltip);
-        });
     });
 });
