@@ -1,179 +1,103 @@
-/* Basic styles */
+/* General Styles */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use Comic Sans MS */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1f1c2c, #928DAB); /* Dark gradient background */
-    color: #fff; /* White text color */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Make body take full height */
+    background-color: #f5f5f5;
 }
 
 header {
-    position: relative;
-    padding: 20px; /* Padding for header */
+    background-color: #333;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-}
-
-.header-text {
-    margin-left: 20px; /* Space between text and image */
-    z-index: 1; /* Ensure text is above background */
-}
-
-.background-image {
-    position: relative;
-    width: 300px; /* Increased size of image */
-    height: 300px; /* Increased size of image */
-}
-
-.background-image img {
-    width: 100%; /* Full width for image */
-    border-radius: 50%; /* Circular image */
-}
-
-nav ul {
-    list-style-type: none; /* Remove bullet points */
+h1 {
     margin: 0;
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.social-links i {
+    margin-right: 5px;
+}
+
+/* Scroll Hint */
+.scroll-hint {
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.scroll-hint p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Section Styles */
+section {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.resume-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Experience */
+#experience .job {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Projects */
+#projects .project {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Skills */
+#skills ul {
+    list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
-    display: inline; /* Display list items in a row */
-    margin-right: 20px; /* Space between items */
-}
-
-nav ul li a {
-    color: white; /* White link color */
-    text-decoration: none; /* Remove underline from links */
-    padding: 10px 15px; /* Add padding for buttons */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #007bff; /* Button color */
-    transition: background-color 0.3s; /* Smooth transition */
-}
-
-nav ul li a:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-section {
-    margin: 40px; /* Space around sections */
-    padding: 20px; /* Space inside sections */
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
-    border-radius: 10px; /* Rounded corners */
-}
-
-h1, h2 {
-    color: #f8f9fa; /* Light color for headings */
-}
-
-footer {
-    background-color: #333; /* Dark background for footer */
-    color: white; /* White text color */
-    text-align: center; /* Center text in footer */
-    padding: 10px; /* Space inside footer */
-}
-
-.timeline {
-    position: relative;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.timeline-item {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent background */
-    border-radius: 8px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.timeline-item:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
-}
-
-.details {
-    display: none; /* Hidden details */
-}
-
-.skill {
-    margin: 10px 0; /* Space between skill entries */
-}
-
-.rating {
-    background-color: #ddd; /* Background for the rating */
-    border-radius: 5px; /* Rounded corners */
-    width: 100%; /* Full width */
-    height: 20px; /* Height of the rating bar */
-}
-
-.filled {
-    background-color: #008cba; /* Color of the filled part */
-    height: 100%; /* Full height */
-    border-radius: 5px; /* Rounded corners for filled part */
-    width: 90%; /* Keep it static */
-}
-
-ul {
-    list-style-type: none; /* Remove bullet points */
-    padding-left: 0; /* Remove padding from left */
-}
-
-ul li {
-    padding: 5px 0; /* Space above and below list items */
-}
-
-a {
-    color: #008cba; /* Blue color for links */
-}
-
-/* Medium articles */
-.medium-article {
-    background: rgba(255, 255, 255, 0.1); /* Transparent background */
-    border-radius: 8px;
-    margin: 10px 0; /* Space between articles */
+#skills ul li {
+    display: inline-block;
+    background-color: #333;
+    color: white;
     padding: 10px;
-    transition: background-color 0.3s; /* Smooth transition */
+    margin: 10px;
+    border-radius: 8px;
 }
 
-.medium-article:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
-}
-
-/* Mobile navigation styles */
-.mobile-nav-toggle {
-    display: none; /* Initially hide the toggle button */
-}
-
-/* Media query for mobile screens */
-@media (max-width: 768px) {
-    .mobile-nav-toggle {
-        display: block; /* Show toggle button on mobile */
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    nav ul {
-        display: none; /* Hide menu by default on mobile */
-        flex-direction: column; /* Stack menu items */
-        width: 100%; /* Full width */
-        background-color: #333; /* Dark background for dropdown */
-    }
-
-    nav ul.active {
-        display: flex; /* Show menu when active */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Space between items in dropdown */
-    }
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
